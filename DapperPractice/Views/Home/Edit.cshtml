@@ -1,0 +1,21 @@
+﻿@using DapperPractice.Services
+@model Customer
+
+@{
+    ViewData["Title"] = "Edit Page";
+}
+<div>
+    <form asp-controller="Home" asp-action="Update" method="post">
+        <label>Customer ID:</label>
+        <p>@Model.CustomerID</p>
+        <input id="CustomerID" name="CustomerID" value="@Model.CustomerID" type="hidden" />
+        <br />
+        <label>Name:</label>
+        <input id="FirstName" name="FirstName" value="@Model.FirstName" />
+        <br />
+        <label>Email Address:</label>
+        <input id="EmailAddress" name="EmailAddress" value="@Model.EmailAddress" />
+
+        <button type="submit">Save</button>
+    </form>
+</div>
